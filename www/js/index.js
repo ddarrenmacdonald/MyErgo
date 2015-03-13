@@ -11,12 +11,12 @@ var app = express();
 app.use(bodyParser.json({ type: 'application/json' }));
 app.use(expressValidator());
 
-require('./config/passport')(passport); // pass passport for configuration
+require('./passport')(passport); // pass passport for configuration
 
 // required for passport
 app.use(passport.initialize());
 
-var postgres = require('./lib/postgres');
+var postgres = require('./postgres');
 
 // local login.  This requires a username, password, and logintype.  If no logintype is entered,
 // it will default to local login
