@@ -36,8 +36,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
     templateUrl: "templates/tabs.html"
   })
 
+  // Adding in Passport plugin and facebook support from Rob's Tutorial
+  .state('tab.login', {
+    url: "/login",
+    views: {
+    'tab-login' : {
+      templateUrl: "templates/login.html",
+      controller: 'LoginCtrl'
+    }
+  }
+  })
+
+  // This state will display the facebook profile information after login has been made
+  .state('tab.facebookProfile', {
+    url: '/facebookProfile',
+    views: {
+    'tab-FB' :{
+    templateUrl: 'templates/facebookProfile.html',
+    controller: 'FacebookProfileCtrl'
+    }
+  }
+  }) 
+  
+
   // Each tab has its own nav history stack:
 
+  /* Replaced this dashboard with Login
   .state('tab.dash', {
     url: '/dash',
     views: {
@@ -46,7 +70,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
         controller: 'DashCtrl'
       }
     }
-  })
+  }) */
 
   .state('tab.chats', {
       url: '/chats',
@@ -57,6 +81,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
         }
       }
     })
+
+  /* Removed the detailed chat view
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
@@ -65,7 +91,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
           controller: 'ChatDetailCtrl'
         }
       }
-    })
+    }) */
 
   .state('tab.account', {
     url: '/account',
