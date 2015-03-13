@@ -36,6 +36,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
     templateUrl: "templates/tabs.html"
   })
 
+/*  HIDDEN
   // Adding in Passport plugin and facebook support from Rob's Tutorial
   .state('tab.login', {
     url: "/login",
@@ -56,12 +57,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
     controller: 'FacebookProfileCtrl'
     }
   }
-  }) 
+  }) */
   
 
   // Each tab has its own nav history stack:
 
-  /* Replaced this dashboard with Login
+  // Replaced this dashboard with Login
   .state('tab.dash', {
     url: '/dash',
     views: {
@@ -70,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
         controller: 'DashCtrl'
       }
     }
-  }) */
+  }) 
 
   .state('tab.chats', {
       url: '/chats',

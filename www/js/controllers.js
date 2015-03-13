@@ -1,5 +1,6 @@
 angular.module('starter.controllers', ['ngStorage', 'ngCordova'])
 
+/* HIDDEN - Rob's tutorial
 // Added in controllers from Rob's tutorial
 .controller('LoginCtrl', function($scope, $http, $cordovaOauth, $localStorage, $location) {
 
@@ -79,10 +80,10 @@ angular.module('starter.controllers', ['ngStorage', 'ngCordova'])
             $location.path("/login");
         }
     };
-})
+}) */
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, {})
+.controller('ChatsCtrl', function($scope) {})
 
 .controller('AccountCtrl', function($scope) {});
